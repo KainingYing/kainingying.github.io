@@ -1,5 +1,5 @@
 main:
-  - title: "MT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI"
+  - title: "MMT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI"
     authors: <strong>Kaining Ying*</strong>, Fanqing Meng*, Jin Wang*, Zhiqian Li, Han Lin, Yue Yang, Hao Zhang, Wenbo Zhang, Yuqi Lin, Shuo Liu, Jiayi Lei, Quanfeng Lu, Runjian Chen, Peng Xu, Renrui Zhang, Haozhe Zhang, Peng Gao, Yali Wang, Yu Qiao, Ping Luo, Kaipeng Zhang, Wenqi Shao
     conference_short: ICML
     conference: International Conference on Machine Learning <strong>(ICML)</strong>, 2024.
@@ -19,4 +19,14 @@ main:
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/ctvis_teaser.png
     # notes: Early Accept
+
+  - title: "ISDA: Position-Aware Instance Segmentation with Deformable Attention"
+    authors: <strong>Kaining Ying*</strong>, Zhenhua Wang, Bai Cong, Pengfei Zhou
+    conference_short: ICASSP
+    conference: IEEE International Conference on Acoustics, Speech and Signal Processing <strong>(ICASSP)</strong>, 2022. 
+    pdf: https://arxiv.org/pdf/2202.12251.pdf
+    code: https://github.com/KainingYing/ISDA
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/isda_teaser.png
+    notes: Oral Presentation
 
