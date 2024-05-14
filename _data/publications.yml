@@ -1,7 +1,7 @@
 main:
 
   - title: "CTVIS: Consistent Training for Online Video Instance Segmentation"
-    authors: <strong>Kaining Ying*<\strong>, Qing Zhong*, Weian Mao, Zhenhua Wang, Hao Chen, Lin Yuanbo Wu, Yifan Liu, Chengxiang Fan, Yunzhi Zhuge, Chunhua Shen
+    authors: <strong>Kaining Ying*</strong>, Qing Zhong*, Weian Mao, Zhenhua Wang, Hao Chen, Lin Yuanbo Wu, Yifan Liu, Chengxiang Fan, Yunzhi Zhuge, Chunhua Shen
     conference_short: ICCV
     conference: International Conference on Computer Vision <strong>(ICCV)</strong>, 2023. 
     pdf: https://arxiv.org/pdf/2306.00988.pdf
