@@ -15,8 +15,8 @@ I spent valuable and memorable 7 years getting my Bachelor's and Master's degree
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
+- **[2024-05]** One Paper is accepted by ICML 2024! Congrats!
+- **[2023-07]** One paper is accepted by ICCV 2023! Congrats!
 
 {% include_relative _includes/publications.md %}
 
