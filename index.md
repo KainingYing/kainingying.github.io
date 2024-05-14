@@ -16,8 +16,8 @@ I spent valueable 7 years getting my Bachelor's and Master's degrees at Zhejiang
 
 ## News
 
-- **[2024-05]** One paper is accepted by ICML 2024! Congrats!
-- **[2023-07]** One paper is accepted by ICCV 2023! Congrats!
+- **[2024-05]** One paper is accepted by ICML 2024! Congrats to all of my co-authors!
+- **[2023-07]** One paper is accepted by ICCV 2023! Congrats to all of my co-authors!
 
 {% include_relative _includes/publications.md %}
 

@@ -1,16 +1,15 @@
 main:
-
   - title: "CTVIS: Consistent Training for Online Video Instance Segmentation"
     authors: <strong>Kaining Ying*</strong>, Qing Zhong*, Weian Mao, Zhenhua Wang, Hao Chen, Lin Yuanbo Wu, Yifan Liu, Chengxiang Fan, Yunzhi Zhuge, Chunhua Shen
     conference_short: ICCV
     conference: International Conference on Computer Vision <strong>(ICCV)</strong>, 2023. 
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+    pdf: http://openaccess.thecvf.com/content/ICCV2023/papers/Ying_CTVIS_Consistent_Training_for_Online_Video_Instance_Segmentation_ICCV_2023_paper.pdf
+    code: https://github.com/KainingYing/CTVIS
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/ctvis_teaser.png
+    # notes: Early Accept
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
+  - title: "MT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI"
     authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
     conference_short: ICML
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
