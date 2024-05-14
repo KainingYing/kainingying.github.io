@@ -2,7 +2,7 @@ main:
   - title: "CTVIS: Consistent Training for Online Video Instance Segmentation"
     authors: <strong>Kaining Ying*</strong>, Qing Zhong*, Weian Mao, Zhenhua Wang, Hao Chen, Lin Yuanbo Wu, Yifan Liu, Chengxiang Fan, Yunzhi Zhuge, Chunhua Shen
     conference_short: ICCV
-    conference: International Conference on Computer Vision <strong>(ICCV)</strong>, 2023. 
+    conference: IEEE/CVF International Conference on Computer Vision <strong>(ICCV)</strong>, 2023. 
     pdf: http://openaccess.thecvf.com/content/ICCV2023/papers/Ying_CTVIS_Consistent_Training_for_Online_Video_Instance_Segmentation_ICCV_2023_paper.pdf
     code: https://github.com/KainingYing/CTVIS
     # bibtex: https://bib.yliu.me/MICCAI23.txt
@@ -10,12 +10,12 @@ main:
     # notes: Early Accept
 
   - title: "MT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: <strong>Kaining Ying*</strong>, Fanqing Meng*, Jin Wang*, Zhiqian Li, Han Lin, Yue Yang, Hao Zhang, Wenbo Zhang, Yuqi Lin, Shuo Liu, Jiayi Lei, Quanfeng Lu, Runjian Chen, Peng Xu, Renrui Zhang, Haozhe Zhang, Peng Gao, Yali Wang, Yu Qiao, Ping Luo, Kaipeng Zhang, Wenqi Shao
     conference_short: ICML
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
     pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Oral Presentation
     image: ./assets/img/teaser_example.png

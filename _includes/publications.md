@@ -1,4 +1,5 @@
 <h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
+* and # indicate eual.
 
 <div class="publications">
 <ol class="bibliography">
