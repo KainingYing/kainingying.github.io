@@ -26,5 +26,4 @@ I spent valueable 7 years getting my Bachelor's and Master's degrees at Zhejiang
 ## Friends
 
 - [Pengfei Zhou](https://lancezpf.github.io/) (UTS, UCAS, ZJUT): My best friend. He is an interesting and charming guy!
-
 - [Weijie Ma](https://scholar.google.com/citations?hl=en&user=LGhmrxMAAAAJ) (Fudan, SHLab, CUHK, ZJU): I met Weijie in ZJU. And he recommend me to the SHLab. And both of us will purse our Ph.D degree in Fudan University, Shanghai. Both of us like Taylor Swift. What a coincidence！
