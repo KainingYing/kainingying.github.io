@@ -1,6 +1,6 @@
 main:
   - title: "MMT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI"
-    authors: <strong>Kaining Ying*</strong>, Fanqing Meng*, Jin Wang*, Zhiqian Li, Han Lin, Yue Yang, Hao Zhang, Wenbo Zhang, Yuqi Lin, Shuo Liu, Jiayi Lei, Quanfeng Lu, Runjian Chen, Peng Xu, Renrui Zhang, Haozhe Zhang, Peng Gao, Yali Wang, Yu Qiao, Ping Luo, Kaipeng Zhang, Wenqi Shao
+    authors: <strong>Kaining Ying*</strong>, Fanqing Meng*, Jin Wang*, Zhiqian Li, Han Lin, Yue Yang, Hao Zhang, Wenbo Zhang, Yuqi Lin, Shuo Liu, Jiayi Lei, Quanfeng Lu, Runjian Chen, Peng Xu, Renrui Zhang, Haozhe Zhang, Peng Gao, Yali Wang, Yu Qiao, Ping Luo, Kaipeng Zhang#, Wenqi Shao#
     conference_short: ICML
     conference: International Conference on Machine Learning <strong>(ICML)</strong>, 2024.
     pdf: https://arxiv.org/pdf/2404.16006
@@ -11,7 +11,7 @@ main:
     image: ./assets/img/mmtbench_overview.png
     
   - title: "CTVIS: Consistent Training for Online Video Instance Segmentation"
-    authors: <strong>Kaining Ying*</strong>, Qing Zhong*, Weian Mao, Zhenhua Wang, Hao Chen, Lin Yuanbo Wu, Yifan Liu, Chengxiang Fan, Yunzhi Zhuge, Chunhua Shen
+    authors: <strong>Kaining Ying*</strong>, Qing Zhong*, Weian Mao, Zhenhua Wang#, Hao Chen#, Lin Yuanbo Wu, Yifan Liu, Chengxiang Fan, Yunzhi Zhuge, Chunhua Shen
     conference_short: ICCV
     conference: IEEE/CVF International Conference on Computer Vision <strong>(ICCV)</strong>, 2023. 
     pdf: http://openaccess.thecvf.com/content/ICCV2023/papers/Ying_CTVIS_Consistent_Training_for_Online_Video_Instance_Segmentation_ICCV_2023_paper.pdf
@@ -21,7 +21,7 @@ main:
     # notes: Early Accept
 
   - title: "ISDA: Position-Aware Instance Segmentation with Deformable Attention"
-    authors: <strong>Kaining Ying*</strong>, Zhenhua Wang, Bai Cong, Pengfei Zhou
+    authors: <strong>Kaining Ying</strong>, Zhenhua Wang#, Bai Cong, Pengfei Zhou
     conference_short: ICASSP
     conference: IEEE International Conference on Acoustics, Speech and Signal Processing <strong>(ICASSP)</strong>, 2022. 
     pdf: https://arxiv.org/pdf/2202.12251.pdf
