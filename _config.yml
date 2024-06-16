@@ -1,7 +1,7 @@
 # Basic Information 
 title: Kaining Ying
-# position: Ph.D. Student
-# affiliation: Fudan University
+position: Ph.D. Student
+affiliation: Fudan University
 email: kaining.ying.cv (at) gmail.com
 
 # Search Engine Optimization (SEO)
@@ -21,8 +21,8 @@ twitter: https://twitter.com/
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
 avatar: ./assets/img/avatar.png
-# favicon: ./assets/img/fudan.png
-# favicon_dark: ./assets/img/fudan.png
+favicon: ./assets/img/fudan.png
+favicon_dark: ./assets/img/fudan.png
 
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
