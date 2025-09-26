@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<link rel="shortcut icon" href="pic/assets/fudan.ico">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<meta name="keywords" content="Weijie Ma, CS, FDU, Fudan University">
+<meta name="description" content="Weijie Ma&#39;s home page">
+
+<meta name="google-site-verification" content="xg04VgCH_1GseFDVDJUDOU2fWPkMU61koxePfxI9L2U" />
+<meta name="msvalidate.01" content="E97E87F9D2EF3C50E40066873E89A005" />
+
+<link rel="stylesheet" href="css/jemdoc.css" type="text/css">
+<style>
+h1, h2, h3, h4, h5, h6 {
+    color: black !important;
+}
+
+.pub-button {
+    background: #f0f0f0;
+    color: #666;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pub-button:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.pub-button.active {
+    background: #2c5aa0 !important;
+    color: white !important;
+}
+
+.pub-button.active:hover {
+    background: #1e3f73 !important;
+}
+
+#pubs li > div:first-child, 
+#pubs_all li > div:first-child {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-variant-numeric: lining-nums !important;
+    font-feature-settings: "lnum" 1, "onum" 0 !important;
+    font-weight: 560;
+}
+
+#pubs li, 
+#pubs_all li {
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+#pubs li > div, 
+#pubs_all li > div {
+    margin-bottom: 4px;
+}
+
+.venue {
+    font-weight: 600;
+    font-style: italic;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-variant-numeric: lining-nums !important;
+    font-feature-settings: "lnum" 1, "onum" 0 !important;
+}
+
+.venue-highlight {
+    background: linear-gradient(120deg, #ff6b6b 0%, #ffd93d 100%);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 8px;
+}
+
+#pubs a,
+#pubs_all a {
+    color: #0066cc !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#pubs a:hover,
+#pubs_all a:hover {
+    color: #004499 !important;
+    text-decoration: underline;
+}
+
+#pubs a:visited,
+#pubs_all a:visited {
+    color: #0066cc !important;
+}
+
+.bibtex-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.bibtex-modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+}
+
+.bibtex-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.bibtex-modal-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.bibtex-close {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.bibtex-close:hover {
+    background: #e0e0e0;
+    transform: scale(1.1);
+}
+
+.bibtex-content {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 20px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+.bibtex-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.bibtex-copy-btn, 
+.bibtex-download-btn {
+    background: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.bibtex-copy-btn:hover, 
+.bibtex-download-btn:hover {
+    background: #1e3f73;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.bibtex-download-btn {
+    background: #6c757d;
+}
+
+.bibtex-download-btn:hover {
+    background: #545b62;
+}
+
+.copy-success {
+    background: #28a745 !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+<title>Weijie Ma&#39;s Homepage</title>
+
+<script>
+let selectedPubsContent = '';
+
+function showPubs(id) {
+  if (id == 0) {
+    document.getElementById('pubs').innerHTML = selectedPubsContent;
+    document.getElementById('select0').className = 'pub-button active';
+    document.getElementById('select1').className = 'pub-button';
+  } else {
+    document.getElementById('pubs').innerHTML = document.getElementById('pubs_all').innerHTML;
+    document.getElementById('select0').className = 'pub-button';
+    document.getElementById('select1').className = 'pub-button active';
+  }
+}
+
+function showBibTeX(bibFile, title) {
+  fetch(bibFile)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(data => {
+      const modal = document.getElementById('bibtex-modal');
+      const titleElement = document.getElementById('bibtex-title');
+      const contentElement = document.getElementById('bibtex-content');
+      
+      titleElement.textContent = title;
+      contentElement.textContent = data;
+      modal.style.display = 'block';
+      
+      modal.bibContent = data;
+      modal.bibFilename = bibFile.split('/').pop();
+    })
+    .catch(error => {
+      console.error('Error fetching BibTeX:', error);
+      alert('无法加载BibTeX文件，请稍后重试。');
+    });
+}
+
+function closeBibTeX() {
+  document.getElementById('bibtex-modal').style.display = 'none';
+}
+
+function copyBibTeX() {
+  const modal = document.getElementById('bibtex-modal');
+  const copyBtn = document.querySelector('.bibtex-copy-btn');
+  
+  navigator.clipboard.writeText(modal.bibContent)
+    .then(() => {
+      showCopySuccess(copyBtn);
+    })
+    .catch(err => {
+      console.error('复制失败:', err);
+      fallbackCopyText(modal.bibContent);
+      showCopySuccess(copyBtn);
+    });
+}
+
+function showCopySuccess(button) {
+  const originalText = button.textContent;
+  button.textContent = '已复制!';
+  button.classList.add('copy-success');
+  
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.classList.remove('copy-success');
+  }, 2000);
+}
+
+function fallbackCopyText(text) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+}
+
+function downloadBibTeX() {
+  const modal = document.getElementById('bibtex-modal');
+  const blob = new Blob([modal.bibContent], { type: 'text/plain' });
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  
+  a.href = url;
+  a.download = modal.bibFilename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  window.URL.revokeObjectURL(url);
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('bibtex-modal');
+  if (event.target === modal) {
+    closeBibTeX();
+  }
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeBibTeX();
+  }
+});
+
+window.onload = function() {
+  selectedPubsContent = document.getElementById('pubs').innerHTML;
+  showPubs(0);
+}
+</script>
+</head>
+<body>
+
+<div id="bibtex-modal" class="bibtex-modal">
+  <div class="bibtex-modal-content">
+    <div class="bibtex-modal-header">
+      <h3 id="bibtex-title">BibTeX Citation</h3>
+      <button class="bibtex-close" onclick="closeBibTeX()">&times;</button>
+    </div>
+    <div id="bibtex-content" class="bibtex-content"></div>
+    <div class="bibtex-actions">
+      <button class="bibtex-copy-btn" onclick="copyBibTeX()">Copy</button>
+      <button class="bibtex-download-btn" onclick="downloadBibTeX()">Download</button>
+    </div>
+  </div>
+</div>
+
+<div id="layout-content" style="margin-top:25px">
+
+<table>
+	<tbody>
+		<tr>
+		<td width="75%">
+			<div id="toptitle">
+				<h1>Weijie Ma <font face="Arial">马炜杰</font></h1>
+			</div>
+		Ph.D. Student
+		<p>Fudan University</br></br>
+		Email: wjma24 [at] m [dot] fudan [dot] edu [dot] cn</br>
+		</p>
+		<p>
+			<a href="https://github.com/WeijieMax" target="_blank"><img src="pic/assets/github_logo.png" height="30px"></a>&nbsp;&nbsp;
+			<a href="https://scholar.google.com/citations?user=LGhmrxMAAAAJ" target="_blank"><img src="pic/assets/google_scholar_logo.png" height="30px"></a>&nbsp;&nbsp;
+		</p>
+			</td>
+
+			</td>
+			<td width="25%">
+				<img src="pic/weijie_selfie.jpg" width="80%"/>
+			</td>
+		<tr>
+	</tbody>
+</table>
+
+
+<h2>Biography </h2>
+<p>
+	I'm a second-year Ph.D. student jointly at 
+	<a href="https://cs.fudan.edu.cn" target="_blank">College of Computer Science and Artificial Intelligence</a>@<a href="https://www.fudan.edu.cn" target="_blank">Fudan University</a> 
+	and <a href="https://www.sii.edu.cn/" target="_blank">Shanghai Innovation Institute</a>, 
+	advised by Prof. <a href="https://wlouyang.github.io" target="_blank">Wanli Ouyang</a> 
+	and Prof. <a href="https://scholar.google.com/citations?user=X_ZfX8sAAAAJ" target="_blank">Han-Sen Zhong</a>. 
+	<br>
+	<br>
+	My research interests include computer vision & graphics, virtual/augmented reality, and AI for science (optics/physics/medicine).
+</p>
+
+
+<h2>News</h2>
+<ul>
+	<li>
+		[08/2025] One paper was accepted by Nature.
+	</li>
+	<li>
+		[05/2025] One paper was accepted by PRL as Featured in Physics and Editor's Suggestion.
+	</li>
+</ul>
+
+<h2>Publications</h2>
+<div style="margin-bottom: 15px;">
+	<div style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
+		<div>
+			<button id="select0" onclick="showPubs(0)" class="pub-button active">Selected (Ph.D. Period)</button>
+			<button id="select1" onclick="showPubs(1)" class="pub-button">Full List</button>
+		</div>
+		<div style="color: #666; font-size: 14px;">(*equal contribution)</div>
+	</div>
+</div>
+
+<div id="pubs">
+	<ul>
+		<li>
+			<div >Glasses-Free 3D Display with Ultrawide Viewing Range using Deep Learning</div>
+			<div ><b>Weijie Ma</b>, Zhangrui Zhao, Canyu Zhao, Wanli Ouyang, Han-Sen Zhong</div>
+			<div ><span class="venue">Nature 2025</span></div>
+			<div>[Paper]
+			[<a href="https://github.com/WeijieMax/EyeReal" target="_blank">Code</a>]
+			[BibTeX]</div>
+		</li>
+		<li>
+			<div >AI-Enabled Parallel Assembly of Thousands of Defect-Free Neutral Atom Arrays</div>
+			<div >Rui Lin, Han-Sen Zhong, You Li, Zhangrui Zhao, Le-Tian Zheng, Tai-Ran Hu, Hong-Ming Wu, Zhan Wu, <b>Weijie Ma</b>, Yan Gao, Yi-Kang Zhu, Zhao-Feng Su, Wanli Ouyang, Yu-Chen Zhang, Jun Rui, Ming-Cheng Chen, Chao-Yang Lu, Jian-Wei Pan</div>
+			<div ><span class="venue">Physical Review Letters (PRL) 2025</span><span class="venue-highlight">Featured in Physics</span><span class="venue-highlight">Editors' Suggestion</span></div>
+			<div>[<a href="https://journals.aps.org/prl/abstract/10.1103/2ym8-vs82" target="_blank">Paper</a>]
+			[<a href="javascript:void(0);" onclick="showBibTeX('bib/prl25.bib', 'AI-Enabled Parallel Assembly of Thousands of Defect-Free Neutral Atom Arrays')">BibTeX</a>]</div>
+		</li>
+	</ul>
+</div>
+
+<div id="pubs_all" style="display: none;">
+	<ul>
+		<li>
+			<div >Glasses-Free 3D Display with Ultrawide Viewing Range using Deep Learning</div>
+			<div ><b>Weijie Ma</b>, Zhangrui Zhao, Canyu Zhao, Wanli Ouyang, Han-Sen Zhong</div>
+			<div ><span class="venue">Nature 2025</span></div>
+			<div>[Paper]
+			[<a href="https://github.com/WeijieMax/EyeReal" target="_blank">Code</a>]
+			[<a href="javascript:void(0);" onclick="showBibTeX('bib/nature25.bib', 'Glasses-Free 3D Display with Ultrawide Viewing Range using Deep Learning')">BibTeX</a>]</div>
+		</li>
+		<li>
+			<div >Improving Medical Reasoning with Curriculum-Aware Reinforcement Learning</div>
+			<div >Shaohao Rui, Kaitao Chen, <b>Weijie Ma</b>, Xiaosong Wang</div>
+			<div ><span class="venue">arXiv 2025</span></div>
+			<div>[<a href="https://arxiv.org/abs/2505.19213" target="_blank">Paper</a>]
+			[<a href="https://github.com/shaohao011/MedCCO" target="_blank">Code</a>]
+			[<a href="javascript:void(0);" onclick="showBibTeX('bib/medcco.bib', 'Improving Medical Reasoning with Curriculum-Aware Reinforcement Learning')">BibTeX</a>]</div>
+		</li>
+		<li>
+			<div >AI-Enabled Parallel Assembly of Thousands of Defect-Free Neutral Atom Arrays</div>
+			<div >Rui Lin, Han-Sen Zhong, You Li, Zhangrui Zhao, Le-Tian Zheng, Tai-Ran Hu, Hong-Ming Wu, Zhan Wu, <b>Weijie Ma</b>, Yan Gao, Yi-Kang Zhu, Zhao-Feng Su, Wanli Ouyang, Yu-Chen Zhang, Jun Rui, Ming-Cheng Chen, Chao-Yang Lu, Jian-Wei Pan</div>
+			<div ><span class="venue">Physical Review Letters (PRL) 2025</span><span class="venue-highlight">Featured in Physics</span><span class="venue-highlight">Editors' Suggestion</span></div>
+			<div>[<a href="https://journals.aps.org/prl/abstract/10.1103/2ym8-vs82" target="_blank">Paper</a>]
+			[<a href="javascript:void(0);" onclick="showBibTeX('bib/prl25.bib', 'AI-Enabled Parallel Assembly of Thousands of Defect-Free Neutral Atom Arrays')">BibTeX</a>]</div>
+		</li>
+		<div style="text-align: center; margin: 20px 0; position: relative;">
+			<hr style="border: none; border-top: 1px solid #ccc;">
+			<span style="background: white; padding: 0 15px; color: #666; font-size: 14px; position: absolute; top: -8px; left: 50%; transform: translateX(-50%);">Ph.D. Period ↑</span>
+		</div>
+		<li>
+			<div >LSSInst: Improving Geometric Modeling in LSS-Based BEV Perception with Instance Representation</div>
+			<div ><b>Weijie Ma</b>*, Jingwei Jiang*, Yang Yang, Zehui Chen, Hao Chen</div>
+			<div ><span class="venue">3DV 2025</span></div>
+			<div>[<a href="https://ieeexplore.ieee.org/abstract/document/11125638" target="_blank">Paper</a>]
+			[<a href="https://github.com/WeijieMax/LSSInst" target="_blank">Code</a>]
+			[<a href="javascript:void(0);" onclick="showBibTeX('bib/3dv25.bib', 'LSSInst: Improving Geometric Modeling in LSS-Based BEV Perception with Instance Representation')">BibTeX</a>]</div>
+		</li>
+		<li>
+			<div >Toward Clinically Assisted Colorectal Polyp Recognition via Structured Cross-modal Representation Consistency</div>
+			<div ><b>Weijie Ma</b>, Ye Zhu, Ruimao Zhang, Jie Yang, Yiwen Hu, Zhen Li, Li Xiang</div>
+			<div ><span class="venue">MICCAI 2022</span><span class="venue-highlight">Early Accepted</span></div>
+			<div>[<a href="https://link.springer.com/chapter/10.1007/978-3-031-16437-8_14" target="_blank">Paper</a>]
+			[<a href="https://github.com/WeijieMax/CPC-Trans" target="_blank">Code</a>]
+			[<a href="javascript:void(0);" onclick="showBibTeX('bib/miccai22.bib', 'Toward Clinically Assisted Colorectal Polyp Recognition via Structured Cross-modal Representation Consistency')">BibTeX</a>]</div>
+		</li>
+	</ul>
+</div>
+
+
+<h2><font> Education </font></h2>
+<ul style="list-style-type:none">
+	  <p style="margin-left: 0px; line-height: 150%; margin-top: 8px; margin-bottom: 8px;"><font size="3"><meta charset="utf-8">
+		  Ph.D. Student, College of Computer Science and Artificial Intelligence, Fudan University, 2024 - Present<br>
+		  M.Phil., School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), 2021 - 2023<br>
+		  Bachelor, School of Information Engineering, Zhengzhou University, 2017 - 2021<br>
+	  </font> </p>
+</ul>
+
+<h2><font> Experiences </font></h2>
+<ul style="list-style-type:none">
+	  <p style="margin-left: 0px; line-height: 150%; margin-top: 8px; margin-bottom: 8px;"><font size="3"><meta charset="utf-8">
+		  Intern in Shanghai Artificial Intelligence Laboratory, 2023 - 2025 <br>
+		  Visiting Student in CAD&CG Laboratory, Zhejiang University, 2022 - 2023 <br>
+	  </font> </p>
+</ul>
+
+<!-- <h2><font> Academic Activities </font></h2>
+<ul style="list-style-type:none">
+	  <p style="margin-left: 0px; line-height: 150%; margin-top: 8px; margin-bottom: 8px;"><font size="3"><meta charset="utf-8">
+		  Reviewer for MICCAI<br>
+		  Organizer of <a href='http://amos22.grand-challenge.org/'>Abdominal Multi-Organ Segmentation Challenge</a> in MICCAI, 2022 <br>
+	  </font> </p>
+</ul> -->
+
+<h2><font> Hobbies </font></h2>
+<ul style="list-style-type:none">
+	  <p style="margin-left: 0px; line-height: 150%; margin-top: 8px; margin-bottom: 8px;"><font size="3"><meta charset="utf-8">
+		  <a href="https://music.163.com/#/user/home?id=318051276" target="_blank">Music</a> (esp. Taylor Swift); Literary reading and composition; Cycling; Anime; Cooking<br>
+	  </font> </p>
+</ul>
+
+
+
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+	<tr>
+	<td>
+	<br>
+	<p>
+		<center>
+		<div id="clustrmaps-widget" style="width:100%">
+		<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=400&t=tt&d=KAE2DNI6TdSULh7o_SWlymdZDp12ntmLHZDHfgdpkdQ&co=2d78ad&cmo=ff0000&cmn=ffb800&ct=ffffff'></script>
+		</div> 
+		</center>
+	</p>
+	<p align="center">
+		<font>
+		&copy; Weijie Ma | Last updated: Sept 2025
+		</font>
+	</p>
+	</td>
+	</tr>
+</table>
+
+</div>
+
+</body></html>
