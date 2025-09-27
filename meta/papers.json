@@ -38,9 +38,9 @@
     "venue": "ICCV 2025",
     "selected": true,
     "links": [
-      { "type": "Paper", "url": "" },
-      { "type": "Code", "url": "" },
-      { "type": "BibTeX", "url": "" }
+      { "type": "Paper", "url": "https://arxiv.org/abs/2507.22061" },
+      { "type": "Code", "url": "https://github.com/FudanCVL/MOVE" },
+      { "type": "BibTeX", "url": "bib/move.bib" }
     ]
   },
   {
@@ -49,9 +49,9 @@
     "venue": "ICCV 2025",
     "selected": true,
     "links": [
-      { "type": "Paper", "url": "" },
-      { "type": "Code", "url": "" },
-      { "type": "BibTeX", "url": "" }
+      { "type": "Paper", "url": "https://arxiv.org/abs/2507.22886" },
+      { "type": "Code", "url": "https://github.com/FudanCVL/OmniAVS" },
+      { "type": "BibTeX", "url": "bib/omniavs.bib" }
     ]
   },
   {
