@@ -1,0 +1,23 @@
+{
+  "name": {
+    "en": "Kaining Ying",
+    "zh": "应凯宁"
+  },
+  "title": "Ph.D. Student",
+  "affiliation": "Fudan University",
+  "email": "kaining.ying.cv [at] gmail [dot] com",
+  "photo": "pic/kaining_selfie.jpg",
+  "links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/KainingYing",
+      "icon": "pic/assets/github_logo.png"
+    },
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=MDvaeqUAAAAJ&hl=en",
+      "icon": "pic/assets/google_scholar_logo.png"
+    }
+  ],
+  "bio": "I'm a second-year Ph.D. student at <a href=\"https://cs.fudan.edu.cn\" target=\"_blank\">College of Computer Science and Artificial Intelligence</a>@<a href=\"https://www.fudan.edu.cn\" target=\"_blank\">Fudan University</a>, advised by Prof. <a href=\"https://henghuiding.com\" target=\"_blank\">Henghui Ding</a>.<br><br>My research interests include computer vision, multimodal learning."
+} 
