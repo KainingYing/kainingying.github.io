@@ -11,6 +11,7 @@ A data-driven academic homepage template that separates content from presentatio
   - `papers.json` - Publications with `selected` field to mark featured papers
   - `education.json` - Educational background
   - `experiences.json` - Work experiences and internships
+  - `friends.json` - Research companions and friends
   - `misc.json` - Miscellaneous information and footer
 
 ## Usage
@@ -36,7 +37,8 @@ To update your homepage:
 3. **Publications**: Update `meta/papers.json` (set `selected: true` for featured papers)
 4. **Education**: Modify `meta/education.json`
 5. **Experiences**: Update `meta/experiences.json`
-6. **Other Info**: Edit `meta/misc.json`
+6. **Friends**: Update `meta/friends.json`
+7. **Other Info**: Edit `meta/misc.json`
 
 The changes will be reflected immediately when you refresh the page.
 
@@ -64,6 +66,22 @@ Each publication in `meta/papers.json` has the following structure:
 - `phdPeriod: false` papers will appear below the "Ph.D. Period ↑" separator in the full list
 - Empty `url` fields will display as plain text without links
 - BibTeX files should be placed in the `bib/` folder and referenced by their relative path
+
+### Friends Section
+
+The website includes a dedicated "Friends" section that displays each friend on a separate line. In `meta/friends.json`, friends should follow this structure:
+
+```json
+[
+  {
+    "name": "Person Name",
+    "description": "Brief description or achievement",
+    "url": "https://their-website.com"
+  }
+]
+```
+
+Each friend will be displayed as: "[Person Name](url): Brief description or achievement"
 
 ## BibTeX Integration
 

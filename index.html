@@ -321,16 +321,17 @@ let dataCache = {};
 // Load JSON data
 async function loadData() {
   try {
-    const [profile, news, papers, education, experiences, misc] = await Promise.all([
+    const [profile, news, papers, education, experiences, misc, friends] = await Promise.all([
       fetch('meta/profile.json').then(r => r.json()),
       fetch('meta/news.json').then(r => r.json()),
       fetch('meta/papers.json').then(r => r.json()),
       fetch('meta/education.json').then(r => r.json()),
       fetch('meta/experiences.json').then(r => r.json()),
-      fetch('meta/misc.json').then(r => r.json())
+      fetch('meta/misc.json').then(r => r.json()),
+      fetch('meta/friends.json').then(r => r.json())
     ]);
     
-    dataCache = { profile, news, papers, education, experiences, misc };
+    dataCache = { profile, news, papers, education, experiences, misc, friends };
     renderPage();
   } catch (error) {
     console.error('Error loading data:', error);
@@ -339,7 +340,7 @@ async function loadData() {
 
 // Render the entire page with loaded data
 function renderPage() {
-  const { profile, news, papers, education, experiences, misc } = dataCache;
+  const { profile, news, papers, education, experiences, misc, friends } = dataCache;
   
   // Update title
   document.title = `${profile.name.en}'s Homepage`;
@@ -380,12 +381,14 @@ function renderPage() {
     `${item.title} in ${item.organization}, ${item.period} <br>`
   ).join('');
   
+  // Update friends section
+  const friendsContainer = document.getElementById('friends-list');
+  friendsContainer.innerHTML = '<font size="3">' + friends.map(friend => 
+    `<a href="${friend.url}" target="_blank">${friend.name}</a>: ${friend.description}<br>`
+  ).join('') + 'and many more not listed.<br>' + '</font>';
+  
   // Update miscellaneous
   document.getElementById('misc-hobbies').innerHTML = misc.hobbies;
-  const companionsContainer = document.getElementById('misc-companions');
-  companionsContainer.innerHTML = misc.companions.map(companion => 
-    `<a href="${companion.url}" target="_blank">${companion.name}</a>`
-  ).join(', ') + ', and more not listed.';
   
   // Update footer
   document.getElementById('footer-copyright').textContent = misc.footer.copyright;
@@ -749,11 +752,17 @@ window.onload = function() {
 	  </font> </p>
 </ul> -->
 
+<h2><font> Friends </font></h2>
+<ul style="list-style-type:none">
+	  <div id="friends-list" style="margin-left: 0px; line-height: 150%; margin-top: 8px; margin-bottom: 8px;"><font size="3">
+		  <!-- Friends will be loaded dynamically -->
+	  </font></div>
+</ul>
+
 <h2><font> Miscellaneous </font></h2>
 <ul style="list-style-type:none">
 	  <p style="margin-left: 0px; line-height: 150%; margin-top: 8px; margin-bottom: 8px;"><font size="3"><meta charset="utf-8">
 		  Hobbies: <span id="misc-hobbies">Playing Valorant (ID: <font face="Arial">唐氏玩家#12973</font>) with friends</span><br>
-	      Research Companions: <span id="misc-companions"><a href="https://weijiemax.github.io" target="_blank">Weijie Ma</a>, <a href="https://scholar.google.com/citations?user=X8U4r4YAAAAJ&hl=zh-CN" target="_blank">Hengrui Hu</a>, and more not listed.</span>
 	  </font> </p>
 </ul>
 

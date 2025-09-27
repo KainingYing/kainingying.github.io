@@ -1,20 +1,11 @@
 {
   "hobbies": "Playing Valorant (ID: <font face=\"Arial\">唐氏玩家#12973</font>) with friends",
-  "companions": [
-    {
-      "name": "Weijie Ma",
-      "url": "https://weijiemax.github.io"
-    },
-    {
-      "name": "Hengrui Hu",
-      "url": "https://scholar.google.com/citations?user=X8U4r4YAAAAJ&hl=zh-CN"
-    }
-  ],
+
   "footer": {
     "copyright": "© Kaining Ying",
     "lastUpdated": "Sept 2025",
     "template": {
-      "text": "Template from weijiemax.github.io",
+      "text": "weijiemax.github.io",
       "url": "https://weijiemax.github.io"
     }
   }
